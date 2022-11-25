@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Resenia from './Resenia'
-const ReseniaList =( {listaresenias} )=> {
+const ReseniaList =( {listaresenias, deleteResenia} )=> {
     console.log(listaresenias)
    
         if (!listaresenias || listaresenias.legenth===0) {
@@ -12,6 +12,7 @@ const ReseniaList =( {listaresenias} )=> {
                          {/* recorrer la lista de resenias  */}
                 {listaresenias.map((resenia)=>(
                     <Resenia 
+                    deleteResenia={deleteResenia}
                     key={resenia.id}
                     resenia={resenia}/>
                 ))}
